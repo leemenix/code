@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#https://wiki.centos.org/HowTos/EncryptedFilesystem
 # Initial FS Creation
 # I typically encrypt files, not whole partitions, so I combine dm-crypt with the losetup loopback device maintenance tool. In the bare language of the Unix shell, here are the steps to create and mount an encrypted filesystem.
 
