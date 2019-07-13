@@ -76,6 +76,16 @@ mount_crypto_fs(){
 	## Mount the filesystem
 	mount /dev/mapper/${FILE_NAME} ${MOUNT_POINT}
 }
+
+#####MAIN
+mount_firefox_fs() {
+	mount_crypto_fs /root firefox_fs /home/leemenix/firefox
+	chown leemenix.users -R /home/leemenix/firefox
+}
+
+umount_firefox_fs() {
+	unmount_crypto_fs firefox_fs /home/leemenix/firefox
+}
 #
 #Note that cryptsetup will not provide a useful error message if you mistype the passphrase. All you'll get is a somewhat unhelpful message from mount:
 #
